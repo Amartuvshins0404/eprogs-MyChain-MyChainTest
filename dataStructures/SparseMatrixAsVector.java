@@ -195,11 +195,11 @@ public class SparseMatrixAsVector
    }
 
    /** @return next term in the matrix and its index */
-   static TIPair nextPair(Enumeration enum, int columns)
+   static TIPair nextPair(Enumeration enumeration, int columns)
    {
-      if (enum.hasMoreElements())
+      if (enumeration.hasMoreElements())
       {
-         MatrixTerm t = (MatrixTerm) enum.nextElement();
+         MatrixTerm t = (MatrixTerm) enumeration.nextElement();
          // row-major index plus number of columns in matrix
          int index = t.row * columns + t.col;
          return new TIPair(t, index);
